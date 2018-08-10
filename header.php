@@ -35,11 +35,11 @@
 				</div>
 				<div class="menu-wrapper grid">
 					<ul id="menu" class="menu">
-						<li class="icon icon-about active"><a href="#">О компании</a></li>
-						<li class="icon icon-adv"><a href="#">Преимущества</a></li>
-						<li class="icon icon-mill"><a href="#">Борфрезы</a></li>
-						<li class="icon icon-flap"><a href="#">Лепестковые диски</a></li>
-						<li class="icon icon-callback"><a href="#">Обратная связь</a></li>
+						<li class="icon icon-about active"><a href="#about">О компании</a></li>
+						<li class="icon icon-adv"><a href="#advantages">Преимущества</a></li>
+						<li class="icon icon-mill"><a href="#mills">Борфрезы</a></li>
+						<li class="icon icon-flap"><a href="#flaps">Лепестковые диски</a></li>
+						<li class="icon icon-callback"><a href="#contacts">Обратная связь</a></li>
 					</ul>
 				</div>
 				<div class="footer-link-wrapper grid">

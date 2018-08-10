@@ -16,7 +16,7 @@
 	menu_items.forEach( function ( menu_item ) {
 		var menu_item_link = menu_item.querySelector( 'a' );
 		menu_item_link.onclick = function ( e ) {
-			e.preventDefault();
+			// e.preventDefault();
 			menu_items.forEach( function ( menu_item ) {
 				menu_item.classList.remove( 'active' );
 			} );

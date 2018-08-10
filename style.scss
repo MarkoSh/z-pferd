@@ -68,6 +68,7 @@ input, textarea {
 #main {
 	overflow: auto;
 	background: red;
+	position: relative;
 }
 
 .sidebar {
@@ -275,4 +276,10 @@ input, textarea {
 		background: white;
 		color: $blue;
 	}
+}
+
+.section {
+	min-height: 100%;
+	width: 100%;
+	float: left;
 }
