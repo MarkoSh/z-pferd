@@ -1,0 +1,277 @@
+@import "style.css";
+
+@import "scss/vars";
+@import "scss/fonts";
+@import "scss/libs";
+
+::placeholder {
+	color: rgba( white, .5 );
+}
+	
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+}
+
+input, textarea {
+	border: #666 1px solid;
+	outline: none;
+	&:focus:required:invalid {
+		border-color: red;
+	}
+
+	&:required:valid {
+		border-color: green;
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+
+.text-center {
+	text-align: center
+}
+
+.grid {
+	display: grid;
+}
+
+#page {
+	height: 100%;
+	grid-template-columns: 1fr 2fr;
+	@media ( max-width: 1024px ) {
+		grid-template-columns: 90px 1fr;
+	}
+}
+
+#main {
+	overflow: auto;
+	background: red;
+}
+
+.sidebar {
+	grid-template-rows: 1fr;
+	background: $blue;
+	padding: #{ $gutter * 3 } #{ $gutter * 2 } $gutter #{ $gutter * 3 };
+	@media ( max-width: 1024px ) {
+		padding: 30px;
+	}
+	.top {
+		grid-template-columns: 1fr 1fr;
+		@media ( max-width: 1024px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.logo {
+		display: block;
+		background: url( 'img/pferd.svg' ) left top no-repeat;
+		background-size: auto 80px;
+		@media ( max-width: 1024px ) {
+			background-size: 30px auto;
+		}
+	}
+	.phone-callback {
+		@media ( max-width: 1024px ) {
+			display: none;
+		}
+		a {
+			display: block;
+			color: white;
+			font-size: 22px;
+			text-decoration: none;
+			transition: .2s;
+		}
+		.callback {
+			opacity: .5;
+			display: inline-block;
+			border-bottom: 1px dashed white;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		form {
+			overflow: hidden;
+			height: 0;
+			transition: .2s;
+			&.active {
+				height: 240px;
+			}
+		}
+		.fieldset {
+			padding: #{ $gutter * 2 } 0;
+			grid-gap: $gutter;
+		}
+		.input-text {
+			display: block;
+			width: 100%;
+		}
+	}
+	.menu-wrapper {
+		height: 435px;
+		align-self: end;
+		grid-template-columns: 1fr 1fr;
+		@media ( max-width: 1024px ) {
+			grid-template-columns: 1fr;
+		}
+		.menu {
+			@media ( max-width: 1024px ) {
+				grid-column: 1 / 2;
+			}
+			grid-column: 2 / 3;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li {
+				margin-bottom: 1px;
+				a {
+					@media ( max-width: 1024px ) {
+						width: 30px;
+						overflow: hidden;
+						white-space: nowrap;
+						text-indent: 60px;
+					}
+					@media ( max-width: 320px ) {
+						font-size: 20px;
+					}
+					position: relative;
+					display: block;
+					padding: $gutter 0;
+					font-size: 28px;
+					color: rgba( white, .5 );
+					transition: .2s;
+					text-decoration: none;
+					&:hover {
+						color: white;
+						&:before {
+							opacity: 1;
+							transform: scale( 1 );
+						}
+					}
+					&:before {
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 30px;
+						height: 30px;;
+						margin-right: 30px;
+						margin-left: -60px;
+						@media ( max-width: 1024px ) {
+							margin-left: 0;
+							opacity: .5;
+							transform: scale( 1 );
+							position: absolute;
+							top: 28px;
+							left: 0;
+						}
+						opacity: 0;
+						transition: .2s;
+						transform: scale( 0 );
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+				}
+				&.active {
+					a {
+						color: white;
+						&:before {
+							opacity: 1;
+							transform: scale( 1 );
+						}
+					}
+				}
+			}
+			.icon-about { 
+				a:before { 
+					background-image: url( 'img/icons/about.svg' );
+				}
+			}
+			.icon-adv { 
+				a:before { 
+					background-image: url( 'img/icons/advantages.svg' );
+				}
+			}
+			.icon-mill { 
+				a:before { 
+					background-image: url( 'img/icons/mill.svg' );
+				}
+			}
+			.icon-flap { 
+				a:before { 
+					background-image: url( 'img/icons/flap.svg' );
+				}
+			}
+			.icon-callback { 
+				a:before { 
+					background-image: url( 'img/icons/popcallback.svg' );
+				}
+			}
+		}
+	}
+	.footer-link-wrapper {
+		height: 30px;
+		@media ( max-width: 1024px ) {
+			display: none;
+		}
+		grid-template-columns: 1fr 1fr;
+		align-self: end;
+	}
+	.footer-link {
+		grid-column: 2 / 3;
+		align-content: center;
+		border-top: 1px solid white;
+		color: white;
+		text-decoration: none;
+		text-align: center;
+		margin: 0 0 0 #{ -$gutter * 3 };
+	}
+}
+
+.input-text {
+	display: inline-block;
+	background: none;
+	padding: #{ $gutter / 2 } 0;
+	color: white;
+	border: none;
+	border-bottom: 1px solid white;
+}
+
+.button {
+	cursor: pointer;
+	border: 1px solid white;
+	padding: $gutter #{ $gutter * 2 };
+	text-decoration: none;
+	text-align: center;
+	transition: .2s;
+	text-transform: uppercase;
+	background: none;
+	display: inline-block;
+	color: white;
+	font-size: 12px;
+	font-family: $default-bold-font;
+	&:hover {
+		background: white;
+		color: $blue;
+	}
+}

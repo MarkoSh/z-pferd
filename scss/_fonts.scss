@@ -1,0 +1,12 @@
+@import "_mixins/font-face";
+
+@include font-face( 'SFUIDisplay-Black', 'fonts/SFUIDisplay-Black' );
+@include font-face( 'SFUIDisplay-Bold', 'fonts/SFUIDisplay-Bold' );
+@include font-face( 'SFUIDisplay-Heavy', 'fonts/SFUIDisplay-Heavy' );
+@include font-face( 'SFUIDisplay-Light', 'fonts/SFUIDisplay-Light' );
+@include font-face( 'SFUIDisplay-Regular', 'fonts/SFUIDisplay-Regular' );
+@include font-face( 'SFUIDisplay-Thin', 'fonts/SFUIDisplay-Thin' );
+@include font-face( 'SFUIText-Heavy', 'fonts/SFUIText-Heavy' );
+@include font-face( 'SFUIText-Light', 'fonts/SFUIText-Light' );
+@include font-face( 'SFUIText-Regular', 'fonts/SFUIText-Regular' );
+@include font-face( 'SFUIText-Semibold', 'fonts/SFUIText-Semibold' );
