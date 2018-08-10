@@ -26,9 +26,16 @@
 	} );
 
 	var phones = document.querySelectorAll( '[name=phone]' ),
+		emails = document.querySelectorAll( '[name=email]' ),
 		im = new Inputmask( '+7 (999) 999-99-99' );
 	phones.forEach( function ( phone ) {
 		im.mask( phone );
 	} );
+	im = new Inputmask( 'email' );
+	emails.forEach( function ( email ) {
+		im.mask( email );
+	} );
+
+	
 
 } )();
