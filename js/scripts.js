@@ -25,4 +25,10 @@
 		};
 	} );
 
+	var phones = document.querySelectorAll( '[name=phone]' ),
+		im = new Inputmask( '+7 (999) 999-99-99' );
+	phones.forEach( function ( phone ) {
+		im.mask( phone );
+	} );
+
 } )();
