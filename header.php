@@ -34,7 +34,7 @@
 					</div>
 				</div>
 				<div class="menu-wrapper grid">
-					<ul class="menu">
+					<ul id="menu" class="menu">
 						<li class="icon icon-about active"><a href="#">О компании</a></li>
 						<li class="icon icon-adv"><a href="#">Преимущества</a></li>
 						<li class="icon icon-mill"><a href="#">Борфрезы</a></li>

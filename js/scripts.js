@@ -10,4 +10,19 @@
 		};
 	} );
 
+	var menu = document.getElementById( 'menu' ),
+		menu_items = menu.querySelectorAll( 'li' );
+
+	menu_items.forEach( function ( menu_item ) {
+		var menu_item_link = menu_item.querySelector( 'a' );
+		menu_item_link.onclick = function ( e ) {
+			e.preventDefault();
+			menu_items.forEach( function ( menu_item ) {
+				menu_item.classList.remove( 'active' );
+			} );
+			menu_item.classList.add( 'active' );
+			return true;
+		};
+	} );
+
 } )();
