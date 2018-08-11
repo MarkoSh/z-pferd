@@ -148,6 +148,10 @@ input, textarea {
 			padding: 0;
 			margin: 0;
 			list-style: none;
+			font-size: 28px;
+			@media ( max-width: 1440px ) {
+				font-size: 20px;
+			}
 			li {
 				margin-bottom: 1px;
 				a {
@@ -157,13 +161,10 @@ input, textarea {
 						white-space: nowrap;
 						text-indent: 60px;
 					}
-					@media ( max-width: 320px ) {
-						font-size: 20px;
-					}
 					position: relative;
 					display: block;
 					padding: $gutter 0;
-					font-size: 28px;
+					
 					color: rgba( white, .5 );
 					transition: .2s;
 					text-decoration: none;
@@ -290,7 +291,7 @@ input, textarea {
 	overflow: auto;
 	width: 100%;
 	height: 100%;
-	padding: 68px 176px;
+	padding: #{ $gutter * 3 } #{ $gutter * 9 };
 	position: relative;
 	&.active {
 		display: block;
@@ -330,7 +331,7 @@ input, textarea {
 .about-section {
 	background: #333 url("img/bg.jpg") left center no-repeat;
 	background-size: auto 150%;
-	animation: slideBg 50s linear alternate infinite;
+	// animation: slideBg 50s linear alternate infinite;
 	@media ( max-width: 1024px ) {
 		padding: #{ $gutter * 2 };
 	}
@@ -353,6 +354,20 @@ input, textarea {
 			margin: 40px 0;
 		}
 	}
+
+	.gallery-link {
+		color: #fff;
+		position: absolute;
+		left: #{ $gutter * 9 };
+		bottom: #{ $gutter * 3 };
+		@media ( max-width: 1024px ) {
+			left: #{ $gutter * 2 };
+			bottom: #{ $gutter * 2 };
+		}
+		@media ( max-width: 425px ) {
+			position: static;
+		}
+	}
 }
 
 @keyframes slideBg {
@@ -372,20 +387,16 @@ input, textarea {
 }*/
 
 
-.gallery-link {
-	-webkit-align-self: end;
-	-ms-flex-item-align: end;
-	align-self: end;
-	color: #fff
-}
+
 
 .about-link {
-	color: #0080ff
+	color: #0080ff;
+	position: absolute;
 }
 
 .about-link, .gallery-link {
 	text-decoration: none;
-	font-size: 1.66em
+	font-size: 1.66em;
 }
 
 /*@media (max-width: 768px) {
