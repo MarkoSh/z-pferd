@@ -21,6 +21,15 @@
 				menu_item.classList.remove( 'active' );
 			} );
 			menu_item.classList.add( 'active' );
+
+			var section_href = menu_item_link.getAttribute('href');
+            var section = document.querySelector(section_href);
+			var section_items = section.parentNode.querySelectorAll( 'section' );
+            section_items.forEach( function ( section_item ) {
+                section_item.classList.remove( 'active' );
+            } );
+            section.classList.add( 'active' );
+
 			return true;
 		};
 	} );

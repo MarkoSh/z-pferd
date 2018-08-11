@@ -36,7 +36,7 @@ gulp.task( "js", function() {
 		"js/scripts.js", // Always at the end
 		] )
 	.pipe( concat( "scripts.min.js" ) )
-	.pipe( uglify().on( "error", notify.onError() ) ) // Mifify js (opt.) - mifify hahaha
+	//TODO uncomment .pipe( uglify().on( "error", notify.onError() ) ) // Mifify js (opt.) - mifify hahaha
 	.pipe( gulp.dest( "." ) )
 } )
 
