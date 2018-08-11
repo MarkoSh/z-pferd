@@ -34,14 +34,11 @@
 		};
 	} );
 
-	var phones = document.querySelectorAll( '[name=phone]' ),
-		emails = document.querySelectorAll( '[name=email]' );
-
 	var masks = [ {
-		els: phones,
+		els: document.querySelectorAll( '[name=phone]' ),
 		im: new Inputmask( '+7 (999) 999-99-99' )
 	}, {
-		els: emails,
+		els: document.querySelectorAll( '[name=email]' ),
 		im: new Inputmask( 'email' )
 	} ];
 	masks.forEach( function ( item ) {
