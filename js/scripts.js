@@ -14,7 +14,10 @@
 		menu_items = menu.querySelectorAll( 'li' );
 
 	menu_items.forEach( function ( menu_item ) {
-		var menu_item_link = menu_item.querySelector( 'a' );
+		var menu_item_link = menu_item.querySelector( 'a' ),
+			section_href = menu_item_link.getAttribute( 'href' ),
+			section = document.querySelector( section_href ),
+			section_items = section.parentNode.querySelectorAll( 'section' );
 		menu_item_link.onclick = function ( e ) {
 			// e.preventDefault();
 			menu_items.forEach( function ( menu_item ) {
@@ -22,9 +25,6 @@
 			} );
 			menu_item.classList.add( 'active' );
 
-			var section_href = menu_item_link.getAttribute('href');
-            var section = document.querySelector(section_href);
-			var section_items = section.parentNode.querySelectorAll( 'section' );
             section_items.forEach( function ( section_item ) {
                 section_item.classList.remove( 'active' );
             } );
