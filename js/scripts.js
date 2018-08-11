@@ -37,14 +37,18 @@
 	var phones = document.querySelectorAll( '[name=phone]' ),
 		emails = document.querySelectorAll( '[name=email]' ),
 		im = new Inputmask( '+7 (999) 999-99-99' );
-	phones.forEach( function ( phone ) {
-		im.mask( phone );
-	} );
-	im = new Inputmask( 'email' );
-	emails.forEach( function ( email ) {
-		im.mask( email );
-	} );
 
-	
+	var masks = [ {
+		els: phones,
+		im: new Inputmask( '+7 (999) 999-99-99' )
+	}, {
+		els: emails,
+		im: new Inputmask( 'email' )
+	} ];
+	masks.forEach( function ( item ) {
+		item.els.forEach( function ( el ) {
+			item.im.mask( el );
+		} );
+	} );
 
 } )();
