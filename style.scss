@@ -17,7 +17,7 @@
 
 //!!!
 * {
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 html, body {
@@ -135,6 +135,9 @@ input, textarea {
 	}
 	.menu-wrapper {
 		height: 435px;
+		@media ( max-width: 1440px ) {
+			height: 370px;
+		}
 		align-self: end;
 		grid-template-columns: 1fr 1fr;
 		@media ( max-width: 1024px ) {
@@ -267,13 +270,16 @@ input, textarea {
 .button {
 	cursor: pointer;
 	border: 1px solid white;
-	padding: $gutter #{ $gutter * 2 };
 	text-decoration: none;
 	text-align: center;
 	transition: .2s;
 	text-transform: uppercase;
 	background: none;
-	display: inline-block;
+	display: inline-grid;
+	align-content: center;
+	text-align: center;
+	height: 55px;
+	width: 190px;
 	color: white;
 	font-size: 12px;
 	font-family: $default-bold-font;
