@@ -35,8 +35,7 @@
 	} );
 
 	var phones = document.querySelectorAll( '[name=phone]' ),
-		emails = document.querySelectorAll( '[name=email]' ),
-		im = new Inputmask( '+7 (999) 999-99-99' );
+		emails = document.querySelectorAll( '[name=email]' );
 
 	var masks = [ {
 		els: phones,
