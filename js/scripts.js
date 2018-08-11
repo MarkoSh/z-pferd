@@ -20,6 +20,7 @@
 			section_items = section.parentNode.querySelectorAll( 'section' );
 		menu_item_link.onclick = function ( e ) {
 			// e.preventDefault();
+			
 			menu_items.forEach( function ( menu_item ) {
 				menu_item.classList.remove( 'active' );
 			} );
