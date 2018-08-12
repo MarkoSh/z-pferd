@@ -14,17 +14,18 @@
 		menu_items = menu.querySelectorAll( 'li' );
 
 	menu_items.forEach( function ( menu_item ) {
-		var menu_item_link = menu_item.querySelector( 'a' );
+		var menu_item_link = menu_item.querySelector( 'a' ),
+			section_href = menu_item_link.getAttribute( 'href' ),
+			section = document.querySelector( section_href ),
+			section_items = section.parentNode.querySelectorAll( 'section' );
 		menu_item_link.onclick = function ( e ) {
 			// e.preventDefault();
+			
 			menu_items.forEach( function ( menu_item ) {
 				menu_item.classList.remove( 'active' );
 			} );
 			menu_item.classList.add( 'active' );
 
-			var section_href = menu_item_link.getAttribute('href');
-            var section = document.querySelector(section_href);
-			var section_items = section.parentNode.querySelectorAll( 'section' );
             section_items.forEach( function ( section_item ) {
                 section_item.classList.remove( 'active' );
             } );
@@ -34,17 +35,17 @@
 		};
 	} );
 
-	var phones = document.querySelectorAll( '[name=phone]' ),
-		emails = document.querySelectorAll( '[name=email]' ),
-		im = new Inputmask( '+7 (999) 999-99-99' );
-	phones.forEach( function ( phone ) {
-		im.mask( phone );
+	var masks = [ {
+		els: document.querySelectorAll( '[name=phone]' ),
+		im: new Inputmask( '+7 (999) 999-99-99' )
+	}, {
+		els: document.querySelectorAll( '[name=email]' ),
+		im: new Inputmask( 'email' )
+	} ];
+	masks.forEach( function ( item ) {
+		item.els.forEach( function ( el ) {
+			item.im.mask( el );
+		} );
 	} );
-	im = new Inputmask( 'email' );
-	emails.forEach( function ( email ) {
-		im.mask( email );
-	} );
-
-	
 
 } )();
