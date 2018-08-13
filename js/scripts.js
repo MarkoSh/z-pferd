@@ -11,13 +11,13 @@
 	} );
 
 	var menu = document.getElementById( 'menu' ),
-		menu_items = menu.querySelectorAll( 'li' );
+		menu_items = menu.querySelectorAll( 'li' ),
+		section_items = document.querySelectorAll( 'section' );
 
 	menu_items.forEach( function ( menu_item ) {
 		var menu_item_link = menu_item.querySelector( 'a' ),
 			section_href = menu_item_link.getAttribute( 'href' ),
-			section = document.querySelector( section_href ),
-			section_items = section.parentNode.querySelectorAll( 'section' );
+			section = document.querySelector( section_href );
 		menu_item_link.onclick = function ( e ) {
 			// e.preventDefault();
 			
@@ -48,4 +48,23 @@
 		} );
 	} );
 
+	var about = document.getElementById( 'about' ),
+		gallery = document.getElementById( 'gallery' );
+
+	about.onwheel = function ( e ) {
+		if ( e.deltaY > 0 ) {
+			section_items.forEach( function ( section_item ) {
+                section_item.classList.remove( 'active' );
+			} );
+            gallery.classList.add( 'active' );
+		}
+	};
+	gallery.onwheel = function ( e ) {
+		if ( e.deltaY < 0 ) {
+			section_items.forEach( function ( section_item ) {
+                section_item.classList.remove( 'active' );
+			} );
+            about.classList.add( 'active' );
+		}
+	};
 } )();
