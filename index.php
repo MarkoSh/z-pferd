@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<script>
+    theme_directory = "<?php echo get_template_directory_uri() ?>";
+</script>
+
 <section id="about" class="section about-section active">
     <h1> Борфрезы и КЛТ PFERD:<br> Немецкое качество с русской душой!</h1>
     <div class="content">
@@ -209,69 +213,6 @@
         </div>
     </div>
     <div id="map" class="map-line">
-        <ymaps class="ymaps-2-1-68-map" style="width: 1344px; height: 407px;">
-            <ymaps class="ymaps-2-1-68-map ymaps-2-1-68-i-ua_js_yes ymaps-2-1-68-map-bg ymaps-2-1-68-islets_map-lang-ru"
-                   style="width: 1344px; height: 407px;">
-                <ymaps class="ymaps-2-1-68-inner-panes">
-                    <ymaps class="ymaps-2-1-68-events-pane ymaps-2-1-68-user-selection-none" unselectable="on"
-                           style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 2500; cursor: url(&quot;https://api-maps.yandex.ru/2.1.68/build/release/images/cursor/grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.68/build/release/images/cursor/grab.cur&quot;), move;"></ymaps>
-                    <ymaps class="ymaps-2-1-68-ground-pane"
-                           style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 501; transition-timing-function: ease-out;">
-                        <ymaps style="z-index: 150; position: absolute;">
-                            <canvas height="663" width="1600"
-                                    style="position: absolute; width: 1600px; height: 663px; left: -128px; top: -128px;"></canvas>
-                        </ymaps>
-                    </ymaps>
-                    <ymaps class="ymaps-2-1-68-copyrights-pane"
-                           style="height: 0px; bottom: 0px; right: 0px; top: auto; left: 0px; position: absolute; z-index: 5002;">
-                        <ymaps>
-                            <ymaps class="ymaps-2-1-68-copyright ymaps-2-1-68-copyright_logo_no" style="">
-                                <ymaps class="ymaps-2-1-68-copyright__fog">…</ymaps>
-                                <ymaps class="ymaps-2-1-68-copyright__wrap">
-                                    <ymaps class="ymaps-2-1-68-copyright__layout">
-                                        <ymaps class="ymaps-2-1-68-copyright__content-cell">
-                                            <ymaps class="ymaps-2-1-68-copyright__content">
-                                                <ymaps class="ymaps-2-1-68-copyright__text">© Яндекс</ymaps>
-                                                <ymaps class="ymaps-2-1-68-copyright__agreement">&nbsp;<a
-                                                            class="ymaps-2-1-68-copyright__link" target="_blank"
-                                                            href="https://yandex.ru/legal/maps_termsofuse/?lang=ru">Условия
-                                                        использования</a></ymaps>
-                                            </ymaps>
-                                        </ymaps>
-                                        <ymaps class="ymaps-2-1-68-copyright__logo-cell"><a
-                                                    class="ymaps-2-1-68-copyright__logo" href="" target="_blank"></a>
-                                        </ymaps>
-                                    </ymaps>
-                                </ymaps>
-                            </ymaps>
-                        </ymaps>
-                        <ymaps class="ymaps-2-1-68-map-copyrights-promo">
-                            <iframe src="https://api-maps.yandex.ru/services/inception/?lang=ru_RU&amp;iframe_id=1783&amp;url=%2Fmap&amp;api_version=2.1.68&amp;mode=release&amp;referer_host=pferdrus.abramat.ru&amp;data=%7B%22mapState%22%3A%7B%22origin%22%3A%22jsapi_2_1_68%22%2C%22source%22%3A%22api-maps%22%2C%22from%22%3A%22api-maps%22%2C%22host%22%3A%22pferdrus.abramat.ru%22%7D%2C%22options%22%3A%7B%22padding%22%3A%220%200%208px%208px%22%7D%2C%22availWidth%22%3A1125%7D"
-                                    width="0" height="0" scrolling="no" frameborder="0"
-                                    style="overflow: hidden; width: 124px !important; max-width: 124px !important; min-width: 124px !important; height: 34px !important; max-height: 34px !important; min-height: 34px !important;"></iframe>
-                        </ymaps>
-                    </ymaps>
-                    <ymaps class="ymaps-2-1-68-controls-pane"
-                           style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 4503;">
-                        <ymaps class="ymaps-2-1-68-controls__toolbar" style="margin-top: 10px;">
-                            <ymaps class="ymaps-2-1-68-controls__toolbar_left"></ymaps>
-                            <ymaps class="ymaps-2-1-68-controls__toolbar_right"></ymaps>
-                        </ymaps>
-                        <ymaps class="ymaps-2-1-68-controls__bottom" style="top: 407px;"></ymaps>
-                    </ymaps>
-                    <ymaps class="ymaps-2-1-68-places-pane"
-                           style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2004; transition-timing-function: ease-out;">
-                        <ymaps class="ymaps-2-1-68-placemark-overlay ymaps-2-1-68-user-selection-none" unselectable="on"
-                               style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 526px; top: 121px;">
-                            <ymaps>
-                                <ymaps class="ymaps-2-1-68-image "
-                                       style="position: absolute; left: -11px; top: -38px; width: 34px; height: 41px; opacity: 1; background-position: 0px 0px; background-size: 34px 41px; background-image: url(&quot;https://pferdrus.abramat.ru/wp-content/themes/pferd/img/icons/location.svg&quot;);"></ymaps>
-                            </ymaps>
-                        </ymaps>
-                    </ymaps>
-                </ymaps>
-            </ymaps>
-        </ymaps>
     </div>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <div class="button-set grid">
