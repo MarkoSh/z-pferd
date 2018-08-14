@@ -1,9 +1,5 @@
 <?php get_header(); ?>
 
-<script>
-    theme_directory = "<?php echo get_template_directory_uri() ?>";
-</script>
-
 <section id="about" class="section about-section active">
     <h1> Борфрезы и КЛТ PFERD:<br> Немецкое качество с русской душой!</h1>
     <div class="content">

@@ -26,10 +26,10 @@
 			} );
 			menu_item.classList.add( 'active' );
 
-            section_items.forEach( function ( section_item ) {
-                section_item.classList.remove( 'active' );
-            } );
-            section.classList.add( 'active' );
+			section_items.forEach( function ( section_item ) {
+				section_item.classList.remove( 'active' );
+			} );
+			section.classList.add( 'active' );
 
 			return true;
 		};
@@ -54,40 +54,40 @@
 	about.onwheel = function ( e ) {
 		if ( e.deltaY > 0 ) {
 			section_items.forEach( function ( section_item ) {
-                section_item.classList.remove( 'active' );
+				section_item.classList.remove( 'active' );
 			} );
-            gallery.classList.add( 'active' );
+			gallery.classList.add( 'active' );
 		}
 	};
 	gallery.onwheel = function ( e ) {
 		if ( e.deltaY < 0 ) {
 			section_items.forEach( function ( section_item ) {
-                section_item.classList.remove( 'active' );
+				section_item.classList.remove( 'active' );
 			} );
-            about.classList.add( 'active' );
+			about.classList.add( 'active' );
 		}
 	};
 
 
 
 	//map init
-        var map, placemark;
-        ymaps.ready( function () {
-            map = new ymaps.Map( "map", {
-                controls	: [],
-                center		: [ 59.988072, 30.275255 ],
-                zoom		: 17
-            } );
-            placemark = new ymaps.Placemark(
-                [ 59.988072, 30.275255 ], {
-                    hintContent		: 'Pferd',
-                    balloonContent	: '197183, г. Санкт-Петербург<br />ул. Заусадебная д. 15, Лит. Д<br />Тел.: +7(812) 680-02-50<br />E-mail: zakaz@abramat.ru'
-                }, {
-                    iconLayout		: 'default#image',
-                    iconImageHref	: theme_directory + '/img/icons/location.svg'
-                }
-            );
-            map.geoObjects.add( placemark );
-        } );
+		var map, placemark;
+		ymaps.ready( function () {
+			map = new ymaps.Map( "map", {
+				controls	: [],
+				center		: [ 59.988072, 30.275255 ],
+				zoom		: 17
+			} );
+			placemark = new ymaps.Placemark(
+				[ 59.988072, 30.275255 ], {
+					hintContent		: 'Pferd',
+					balloonContent	: '197183, г. Санкт-Петербург<br />ул. Заусадебная д. 15, Лит. Д<br />Тел.: +7(812) 680-02-50<br />E-mail: zakaz@abramat.ru'
+				}, {
+					iconLayout		: 'default#image',
+					iconImageHref	: theme_directory + '/img/icons/location.svg'
+				}
+			);
+			map.geoObjects.add( placemark );
+		} );
 
 } )();
