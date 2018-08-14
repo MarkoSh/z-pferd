@@ -279,14 +279,54 @@ input, textarea {
 	align-content: center;
 	text-align: center;
 	height: 55px;
-	width: 190px;
+	min-width: 190px;
 	color: white;
+	padding: 0 #{ $gutter * 2 };
 	font-size: 12px;
 	font-family: $default-bold-font;
 	&:hover {
 		background: white;
 		color: $blue;
 	}
+}
+
+@media (max-width: 768px) {
+	.button {
+		padding: 20px
+	}
+}
+
+.button-border-white {
+	color: #fff;
+	border: 1px solid #fff;
+	background: 0 0;
+	&:hover {
+		color: #0080ff;
+		background: #fff;
+		border: 1px solid #fff
+	}
+}
+
+.button-border-blue {
+	color: #0080ff;
+	border: 1px solid #0080ff;
+	background: 0 0;
+	&:hover {
+		color: #fff;
+		background: #0080ff;
+		border: 1px solid #0080ff
+	}
+}
+
+.button-blue {
+	color: #fff;
+	background: #0080ff;
+	border: 1px solid #0080ff;
+	&:hover {
+		background: 0 0;
+		color: #0080ff
+	}
+
 }
 
 
@@ -907,4 +947,10 @@ input, textarea {
 .contacts-section .button-set .buttons {
 	text-align: center
 }
+
+#map {
+	height: 400px;
+}
+
+
 
