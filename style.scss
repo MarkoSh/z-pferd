@@ -918,49 +918,52 @@ input, textarea {
 	}
 }
 
-.form-heading {
-	margin-bottom: #{ $gutter * 2 };
-}
-.fieldset {
-	margin-bottom: #{ $gutter * 2 };
-	grid-gap: #{ $gutter * 2 };
-	::placeholder {
-		color: rgba( $gray, .5 );
+#get_price {
+	.form-heading {
+		margin-bottom: #{ $gutter * 2 };
+	}
+	.fieldset {
+		margin-bottom: #{ $gutter * 2 };
+		grid-gap: #{ $gutter * 2 };
+		::placeholder {
+			color: rgba( $gray, .5 );
+		}
+		label {
+			position: relative;
+			display: block;
+			&:hover {
+				.label {
+					font-size: 12px;
+					top: -12px;
+				}
+			}
+		}
+		.input-text {
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid $gray;
+			color: $black;
+			height: 42px;
+			&:not( :placeholder-shown ) {
+				+ .label {
+					font-size: 12px;
+					top: -12px;
+				}
+			}
+		}
+		.label {
+			position: absolute;
+			top: calc( 50% - 13px );
+			font-family: $default-bold-font;
+			color: $blue;
+			transition: .2s;
+		}
 	}
 	label {
-		position: relative;
-		display: block;
-		&:hover {
-			.label {
-				font-size: 12px;
-				top: -12px;
-			}
-		}
-	}
-	.input-text {
-		display: block;
-		width: 100%;
-		border-bottom: 1px solid $gray;
-		color: $black;
-		height: 42px;
-		&:not( :placeholder-shown ) {
-			+ .label {
-				font-size: 12px;
-				top: -12px;
-			}
-		}
-	}
-	.label {
-		position: absolute;
-		top: calc( 50% - 13px );
-		font-family: $default-bold-font;
-		color: $blue;
-		transition: .2s;
+		cursor: pointer;
 	}
 }
-label {
-	cursor: pointer;
-}
+
 
 .blured {
 	filter: blur( 10px );
