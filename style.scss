@@ -876,6 +876,7 @@ input, textarea {
 		display: block;
 	}
 	position: absolute;
+	overflow: auto;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -883,9 +884,10 @@ input, textarea {
 	z-index: 1000;
 	.modal-content {
 		position: relative;
-		margin: 10% auto;
+		margin: 5% auto;
 		max-width: 700px;
-		padding: #{ $gutter * 3 };
+		width: 70%;
+		padding: #{ $gutter * 4 };
 		background: white;
 		box-shadow: 0 0 30px 0 $black;
 		animation: fadeDown .3s;
@@ -914,6 +916,50 @@ input, textarea {
 			transform: rotate( -45deg );
 		}
 	}
+}
+
+.form-heading {
+	margin-bottom: #{ $gutter * 2 };
+}
+.fieldset {
+	margin-bottom: #{ $gutter * 2 };
+	grid-gap: #{ $gutter * 2 };
+	::placeholder {
+		color: rgba( $gray, .5 );
+	}
+	label {
+		position: relative;
+		display: block;
+		&:hover {
+			.label {
+				font-size: 12px;
+				top: -12px;
+			}
+		}
+	}
+	.input-text {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid $gray;
+		color: $black;
+		height: 42px;
+		&:not( :placeholder-shown ) {
+			+ .label {
+				font-size: 12px;
+				top: -12px;
+			}
+		}
+	}
+	.label {
+		position: absolute;
+		top: calc( 50% - 13px );
+		font-family: $default-bold-font;
+		color: $blue;
+		transition: .2s;
+	}
+}
+label {
+	cursor: pointer;
 }
 
 .blured {

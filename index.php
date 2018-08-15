@@ -221,7 +221,34 @@
 <div id="get_price" class="modal">
 	<div class="modal-content">
 		<a href="#" class="dismiss"></a>
-
+		<form action="/" method="post">
+			<div class="form-heading">
+			Оставьте, пожалуйста, Ваши контактные данные и мы вышлем на почту актуальный прайс-лист!
+			</div>
+			<div class="fieldset grid">
+				<label>
+					<input type="text" name="name" class="input-text" placeholder=" " required />
+					<span class="label">Имя</span>
+				</label>
+				<label>
+					<input type="text" name="phone" class="input-text" placeholder=" " required />
+					<span class="label">Телефон</span>
+				</label>
+				<label>
+					<input type="text" name="email" class="input-text" placeholder=" " required />
+					<span class="label">Email</span>
+				</label>
+				<label>
+					<input type="text" name="city" class="input-text" placeholder=" " required />
+					<span class="label">Город</span>
+				</label>
+				<label>
+					<textarea name="message" class="input-text" cols="30" rows="10" placeholder=" "></textarea>
+					<span class="label">Сообщение</span>
+				</label>
+			</div>
+			<button type="submit" class="button button-border-blue">Отправить</button>
+		</form>
 	</div>
 </div>
 
