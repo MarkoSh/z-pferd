@@ -90,4 +90,31 @@
 			map.geoObjects.add( placemark );
 		} );
 
+	var show_modals = document.querySelectorAll( '.show-modal' ),
+		sections = document.querySelectorAll( 'section' );
+	show_modals.forEach( function ( show_modal ) {
+		var hash = show_modal.getAttribute( 'href' ),
+			modal = document.querySelector( hash );
+		show_modal.onclick = function ( e ) {
+			e.preventDefault();
+			modal.classList.add( 'active' );
+			sections.forEach( function ( section ) {
+				section.classList.add( 'blured' );
+			} );
+			return true;
+		};
+	} );
+
+	window.onclick = function ( e ) {
+		var modals = document.querySelectorAll( '.modal' );
+		if ( e.target.classList.contains( 'modal' ) || e.target.classList.contains( 'dismiss' ) ) {
+			modals.forEach( function ( modal ) {
+				modal.classList.remove( 'active' );
+			} );
+			sections.forEach( function ( section ) {
+				section.classList.remove( 'blured' );
+			} );
+		}
+	};
+
 } )();

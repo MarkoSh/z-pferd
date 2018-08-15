@@ -869,3 +869,64 @@ input, textarea {
 #map {
 	height: 400px;
 }
+
+.modal {
+	display: none;
+	&.active {
+		display: block;
+	}
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	.modal-content {
+		position: relative;
+		margin: 10% auto;
+		max-width: 700px;
+		padding: #{ $gutter * 3 };
+		background: white;
+		box-shadow: 0 0 30px 0 $black;
+		animation: fadeDown .3s;
+	}
+	.dismiss {
+		display: block;
+		position: absolute;
+		top: $gutter;
+		right: $gutter;
+		width: 30px;
+		height: 30px;
+		&:before, &:after {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			background: $black;
+		}
+		&:before {
+			transform: rotate( 45deg );
+		}
+		&:after {
+			transform: rotate( -45deg );
+		}
+	}
+}
+
+.blured {
+	filter: blur( 10px );
+}
+
+@keyframes fadeDown {
+	from {
+		// opacity: 0;
+		top: -100%;
+	}
+	to {
+		// opacity: 0;
+		top: 0;
+	}
+}
