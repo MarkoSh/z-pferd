@@ -423,7 +423,6 @@ input, textarea {
 
 .about-link {
 	color: #0080ff;
-	position: absolute;
 }
 
 .about-link, .gallery-link {
@@ -445,8 +444,28 @@ input, textarea {
 	width: 30px;
 	height: 39px;
 	background: url("img/icons/scroll.svg") center no-repeat;
-	-webkit-background-size: contain;
 	background-size: contain;
+}
+
+
+.gallery-section .gallery {
+	padding: 20px 0;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr)
+	}
+}
+
+
+.gallery-section .gallery a {
+	display: block
+}
+
+.gallery-section .gallery a img {
+	display: block;
+	width: 100%;
+	height: auto
 }
 
 
@@ -865,6 +884,7 @@ input, textarea {
 .contacts-section .button-set .buttons {
 	text-align: center;
 }
+
 
 #map {
 	height: 400px;

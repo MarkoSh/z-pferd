@@ -12,12 +12,20 @@
 
 	var menu = document.getElementById( 'menu' ),
 		menu_items = menu.querySelectorAll( 'li' ),
-		section_items = document.querySelectorAll( 'section' );
+		section_items = document.querySelectorAll( 'section' ),
+        activate_section_func = function (section_href) {
+            var section = document.querySelector(section_href);
+            section_items.forEach(function (section_item) {
+                section_item.classList.remove('active');
+            });
+            section.classList.add('active');
+        };
+
 
 	menu_items.forEach( function ( menu_item ) {
 		var menu_item_link = menu_item.querySelector( 'a' ),
-			section_href = menu_item_link.getAttribute( 'href' ),
-			section = document.querySelector( section_href );
+			section_href = menu_item_link.getAttribute( 'href' );
+
 		menu_item_link.onclick = function ( e ) {
 			// e.preventDefault();
 			
@@ -26,16 +34,14 @@
 			} );
 			menu_item.classList.add( 'active' );
 
-			section_items.forEach( function ( section_item ) {
-				section_item.classList.remove( 'active' );
-			} );
-			section.classList.add( 'active' );
+            activate_section_func(section_href);
 
 			return true;
 		};
 	} );
 
-	var masks = [ {
+
+    var masks = [ {
 		els: document.querySelectorAll( '[name=phone]' ),
 		im: new Inputmask( '+7 (999) 999-99-99' )
 	}, {
@@ -67,6 +73,10 @@
 			about.classList.add( 'active' );
 		}
 	};
+	about.onclick = gallery.onclick = function (el) {
+        var section_href = el.target.getAttribute('href');
+        activate_section_func(section_href);
+    }
 
 
 
