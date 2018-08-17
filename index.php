@@ -18,72 +18,55 @@
 <section id="gallery" class="section gallery-section">
     <a href="#about" class="about-link">О компании</a>
     <div class="grid gallery">
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691.jpg" class="wow fadeInRight"
-           data-wow-delay=".0s"
-           style="visibility: visible; animation-delay: 0s; animation-name: fadeInRight;">
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691.jpg">
             <img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8691-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery//IMG_8698.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".1s"
-                                                                   style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery//IMG_8698.jpg">
             <img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8698-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8698-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8698-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8698-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".2s"
-                                                                   style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8704-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".3s"
-                                                                   style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8707-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".4s"
-                                                                   style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8733-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".5s"
-                                                                   style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8746-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".6s"
-                                                                   style="visibility: hidden; animation-delay: 0.6s; animation-name: none;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8786-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".7s"
-                                                                   style="visibility: hidden; animation-delay: 0.7s; animation-name: none;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8788-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
-        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795.jpg"
-                                                                   class="wow fadeInRight" data-wow-delay=".8s"
-                                                                   style="visibility: hidden; animation-delay: 0.8s; animation-name: none;"><img
-                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-300x300.jpg"
-                    class="attachment-thumbnail size-thumbnail" alt=""
+        <a href="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795.jpg">
+            <img
+                    width="300" height="300" src="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-300x300.jpg" alt=""
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
     </div>
+
+
+   
 </section>
 <section id="advantages" class="section advantages-section">
     <div class="grid advantages">
