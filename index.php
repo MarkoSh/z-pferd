@@ -64,9 +64,6 @@
                     srcset="<?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-300x300.jpg 300w,  <?php echo get_template_directory_uri(); ?>/img/gallery/IMG_8795-100x100.jpg 100w"
                     sizes="(max-width: 300px) 100vw, 300px"></a>
     </div>
-
-
-   
 </section>
 <section id="advantages" class="section advantages-section">
     <div class="grid advantages">
@@ -303,5 +300,17 @@
         </form>
     </div>
 </div>
+
+
+<div id="img_carousel" class="img-carousel">
+    <div class="img-container">
+        <button class="close">×</button>
+        <img>
+        <div class="counter"></div>
+    </div>
+    <button class="arrow arrow-left"></button>
+    <button class="arrow arrow-right"></button>
+</div>
+
 
 <?php get_footer(); ?>
