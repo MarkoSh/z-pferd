@@ -423,7 +423,6 @@ input, textarea {
 
 .about-link {
 	color: #0080ff;
-	position: absolute;
 }
 
 .about-link, .gallery-link {
@@ -445,8 +444,186 @@ input, textarea {
 	width: 30px;
 	height: 39px;
 	background: url("img/icons/scroll.svg") center no-repeat;
-	-webkit-background-size: contain;
 	background-size: contain;
+}
+
+
+.gallery-section .gallery {
+	padding: 20px 0;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	@media (max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr)
+	}
+}
+
+
+.gallery-section .gallery a {
+	display: block
+}
+
+.gallery-section .gallery a img {
+	display: block;
+	width: 100%;
+	height: auto
+}
+
+
+.img-carousel {
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	&.active {
+		display: block;
+	}
+
+
+
+	.arrow, .close {
+		overflow: visible;
+		cursor: pointer;
+		background: 0 0;
+		border: 0;
+		display: block;
+		outline: 0;
+		padding: 0;
+		z-index: 1046;
+		box-shadow: none;
+		touch-action: manipulation
+	}
+
+	.close {
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-decoration: none;
+		text-align: center;
+		opacity: .65;
+		padding: 0 0 18px 10px;
+		color: #333;
+		font-style: normal;
+		font-size: 28px;
+		font-family: Arial, Baskerville, monospace
+	}
+
+	.close:focus, .close:hover {
+		opacity: 1
+	}
+
+	.close:active {
+		top: 1px
+	}
+
+
+	.arrow {
+		position: absolute;
+		opacity: .65;
+		margin: 0;
+		top: 50%;
+		margin-top: -55px;
+		padding: 0;
+		width: 90px;
+		height: 110px;
+	}
+
+	.arrow:active {
+		margin-top: -54px
+	}
+
+	.arrow:focus, .arrow:hover {
+		opacity: 1
+	}
+
+	.arrow:after, .arrow:before {
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: 35px;
+		margin-left: 35px;
+		border: medium inset transparent
+	}
+
+	.arrow:after {
+		border-top-width: 13px;
+		border-bottom-width: 13px;
+		top: 8px
+	}
+
+	.arrow:before {
+		border-top-width: 21px;
+		border-bottom-width: 21px;
+		opacity: .7
+	}
+
+	.arrow-left {
+		left: 0
+	}
+
+	.arrow-left:after {
+		border-right: 17px solid #fff;
+		margin-left: 31px
+	}
+
+	.arrow-left:before {
+		margin-left: 25px;
+		border-right: 27px solid #3f3f3f
+	}
+
+	.arrow-right {
+		right: 0
+	}
+
+	.arrow-right:after {
+		border-left: 17px solid #fff;
+		margin-left: 39px
+	}
+
+	.arrow-right:before {
+		border-left: 27px solid #3f3f3f
+	}
+
+	.counter {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		color: #ccc;
+		font-size: 12px;
+		line-height: 18px;
+		white-space: nowrap;
+	}
+
+	.img-container {
+		position: relative;
+		display: inline-block;
+		line-height: 0;
+		box-sizing: border-box;
+		padding: 40px 0 40px;
+		margin: 0 auto;
+
+		img {
+			max-width: 100%;
+			max-height: 656px;
+			width: auto;
+			height: auto;
+			display: block;
+			box-sizing: border-box;
+			box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+		}
+	}
+
+
 }
 
 
@@ -865,6 +1042,7 @@ input, textarea {
 .contacts-section .button-set .buttons {
 	text-align: center;
 }
+
 
 #map {
 	height: 400px;
