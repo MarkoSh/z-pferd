@@ -227,7 +227,7 @@
         </div>
         <div class="button-set grid">
             <div class="buttons"><a href="#get_price" class="button button-blue show-modal">Запросить прайс</a> <a
-                        href="#speed-table" class="button button-border-blue mfp-popup">Таблица скоростей</a></div>
+                        href="#speed_table" class="button button-border-blue show-modal">Таблица скоростей</a></div>
         </div>
     </div>
 </section>
@@ -307,6 +307,121 @@
             </div>
             <button type="submit" class="button button-border-blue">Отправить</button>
         </form>
+    </div>
+</div>
+
+
+<div id="speed_table" class="modal">
+    <div class="modal-content">
+        <a href="#" class="dismiss"></a>
+        <table class="speed-table">
+            <thead>
+            <tr>
+                <th rowspan="3">ø борфрезы<br>[мм]</th>
+                <th colspan="5">Скорости резания [м/мин]</th>
+            </tr>
+            <tr>
+                <th>250</th>
+                <th>350</th>
+                <th>450</th>
+                <th>600</th>
+                <th>900</th>
+            </tr>
+            <tr>
+                <th colspan="5">Число оборотов [об/мин]</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1,5</td>
+                <td>53.000</td>
+                <td>74.000</td>
+                <td>95.000</td>
+                <td>127.000</td>
+                <td>191.000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>40.000</td>
+                <td>56.000</td>
+                <td>72.000</td>
+                <td>95.000</td>
+                <td>143.000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>27.000</td>
+                <td>37.000</td>
+                <td>48.000</td>
+                <td>64.000</td>
+                <td>95.000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>20.000</td>
+                <td>28.000</td>
+                <td>36.000</td>
+                <td>48.000</td>
+                <td>72.000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>13.000</td>
+                <td>19.000</td>
+                <td>24.000</td>
+                <td>32.000</td>
+                <td>48.000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>10.000</td>
+                <td>14.000</td>
+                <td>18.000</td>
+                <td>24.000</td>
+                <td>36.000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>8.000</td>
+                <td>11.000</td>
+                <td>14.000</td>
+                <td>19.000</td>
+                <td>29.000</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>7.000</td>
+                <td>9.000</td>
+                <td>12.000</td>
+                <td>16.000</td>
+                <td>24.000</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>5.000</td>
+                <td>7.000</td>
+                <td>9.000</td>
+                <td>12.000</td>
+                <td>18.000</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>4.000</td>
+                <td>6.000</td>
+                <td>7.000</td>
+                <td>10.000</td>
+                <td>14.000</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>3.000</td>
+                <td>4.000</td>
+                <td>6.000</td>
+                <td>8.000</td>
+                <td>11.000</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 

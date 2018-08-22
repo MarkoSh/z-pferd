@@ -1128,6 +1128,45 @@ input, textarea {
   }
 }
 
+#speed_table {
+  padding: 60px;
+
+  .speed-table {
+    width: 100%;
+    border-collapse: collapse;
+    font: 12px SFUIDisplay-Regular, sans-serif;
+
+    &, td, th {
+      border: 1px solid #ececec
+    }
+
+    td, th {
+      padding: 12px;
+      text-align: center
+    }
+
+    th {
+      font: 12px SFUIDisplay-Bold, sans-serif
+    }
+
+    tbody tr:first-child {
+      border-top: 3px solid #0080ff
+    }
+
+    tbody tr {
+      transition: .2s;
+      cursor: pointer
+    }
+
+    tbody tr:hover {
+      background-color: #ececec
+    }
+  }
+
+}
+
+
+
 .blured {
   filter: blur(10px);
 }
