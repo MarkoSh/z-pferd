@@ -283,7 +283,8 @@ input, textarea {
     color: $blue;
   }
   @media (max-width: 768px) {
-    padding: 20px
+    padding: 20px;
+    margin: 10px 0;
   }
 }
 
@@ -738,7 +739,6 @@ input, textarea {
     }
 
     .item {
-      -webkit-box-shadow: 0 0 0 1px #0080ff;
       box-shadow: 0 0 0 1px #0080ff;
       height: calc((100vw - 30vw) / 4);
       position: relative;
@@ -750,6 +750,11 @@ input, textarea {
 
       &:hover{
         box-shadow: none;
+
+        @media (max-width: 768px) {
+          box-shadow: 0 0 0 1px #0080ff;
+        }
+
 
         .product-image {
           left: 0;
@@ -771,9 +776,9 @@ input, textarea {
           @media (max-width: 768px) {
             transform: none;
             box-shadow: none;
+            z-index: 0;
           }
         }
-
       }
 
 
@@ -856,6 +861,7 @@ input, textarea {
 .flaps-section {
   padding: 0;
   grid-template-rows: 1fr 1fr;
+
   @media (max-width: 768px) {
     grid-template-rows: unset;
   }
@@ -863,6 +869,7 @@ input, textarea {
 
 .flaps-section .flaps-section-inner {
   padding: 68px 176px;
+
   @media (max-width: 768px) {
     padding: 20px;
   }
@@ -876,6 +883,7 @@ input, textarea {
   grid-template-columns: 1fr calc(100vh / 2);
   grid-template-rows: 1fr 1fr;
   grid-gap: 1px;
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -934,12 +942,20 @@ input, textarea {
 
 .flaps-section .product-image-wrapper:hover {
   box-shadow: none;
+  @media (max-width: 768px) {
+    box-shadow: 0 0 0 1px #0080ff;
+  }
 }
 
 .flaps-section .product-image-wrapper:hover .item-inner {
   box-shadow: 0 0 0 1px #0080ff, 5px 5px 0 0 #0080ff;
   z-index: 1;
   transform: translate(-20px, -20px);
+
+  @media (max-width: 768px) {
+    transform:none;
+    box-shadow:none;
+  }
 }
 
 .flaps-section .product-image-wrapper:hover .product-image {
@@ -1025,6 +1041,10 @@ input, textarea {
     background: white;
     box-shadow: 0 0 30px 0 $black;
     animation: fadeDown .3s;
+
+    @media (max-width: 768px) {
+      padding: #{ $gutter * 2 };
+    }
   }
   .dismiss {
     display: block;
@@ -1033,6 +1053,13 @@ input, textarea {
     right: $gutter;
     width: 30px;
     height: 30px;
+
+    @media (max-width: 768px) {
+      width: 15px;
+      height: 15px;
+    }
+
+
     &:before, &:after {
       content: "";
       display: block;
@@ -1049,7 +1076,10 @@ input, textarea {
     &:after {
       transform: rotate(-45deg);
     }
+
   }
+
+
 }
 
 #get_price {
