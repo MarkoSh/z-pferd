@@ -23,7 +23,7 @@
 					<a href="/" class="logo"></a>
 					<div class="phone-callback">
 						<a href="tel:+88126800250">8 812 680 02 50</a>
-						<a href="#" class="callback">Заказать звонок</a>
+						<a href="#callback" class="callback">Заказать звонок</a>
 						<form id="callback" action="" method="post" class="">
 							<div class="fieldset grid">
 								<input type="text" class="input-text" name="phone" placeholder="Телефон" required />

@@ -1,28 +1,41 @@
 <?php get_header(); ?>
 
 <section id="about" class="section about-section active">
-    <h1> Борфрезы и КЛТ PFERD:<br> Немецкое качество с русской душой!</h1>
-    <div class="content">
-        <p><strong>«ПФЕРД-РУС» –</strong> – является ответом на запрос российского рынка на технологичный
-            инструмент для металлообработки по реальной цене. Уже более 200 лет немецкий концерн August Rüggeberg
-            GmbH &amp; Co. KG PFERD-Werkzeuge производит высокотехнологичный шлифовальный инструмент и абразивные
-            материалы премиум класса. Продукция PFERD отлично зарекомендовала себя на российском рынке и хорошо
-            известна всем специалистам в области металлообработки.
-        </p>
-        <p>Отвечая на запрос российских потребителей, в 2017 году в поселке Металлострой было открыто совместное
-            немецко-российское предприятие, производящее лицензированный инструмент PFERD. Завод получил название
-            «ПП «ПФЕРД-РУС».
-        </p>
-        <p> Производство разделено на два участка:</p>
-        <ul>
-            <li>Производство твердосплавных борфрез;</li>
-            <li>Производство КЛТ (круг лепестковый торцевой).</li>
-        </ul>
-        <p>На обоих участках были внедрены те же технологии, что и на предприятии в Германии. На данный момент это
-            одно из самых современных предприятий в своей области.
-        </p>
+    <div class="phone-callback mobile">
+        <a href="tel:+88126800250">8 812 680 02 50</a>
+        <a href="#callback_mobile" class="callback">Заказать звонок</a>
+        <form id="callback_mobile" action="" method="post" class="">
+            <div class="fieldset grid">
+                <input type="text" class="input-text" name="phone" placeholder="Телефон" required />
+                <input type="text" class="input-text" name="name" placeholder="Контактное лицо" required />
+            </div>
+            <button type="submit" class="button">Заказать звонок</button>
+        </form>
     </div>
-    <a href="#gallery" class="gallery-link">Галерея</a>
+    <div class="about-section-inner">
+        <h1> Борфрезы и КЛТ PFERD:<br> Немецкое качество с русской душой!</h1>
+        <div class="content">
+            <p><strong>«ПФЕРД-РУС» –</strong> – является ответом на запрос российского рынка на технологичный
+                инструмент для металлообработки по реальной цене. Уже более 200 лет немецкий концерн August Rüggeberg
+                GmbH &amp; Co. KG PFERD-Werkzeuge производит высокотехнологичный шлифовальный инструмент и абразивные
+                материалы премиум класса. Продукция PFERD отлично зарекомендовала себя на российском рынке и хорошо
+                известна всем специалистам в области металлообработки.
+            </p>
+            <p>Отвечая на запрос российских потребителей, в 2017 году в поселке Металлострой было открыто совместное
+                немецко-российское предприятие, производящее лицензированный инструмент PFERD. Завод получил название
+                «ПП «ПФЕРД-РУС».
+            </p>
+            <p> Производство разделено на два участка:</p>
+            <ul>
+                <li>Производство твердосплавных борфрез;</li>
+                <li>Производство КЛТ (круг лепестковый торцевой).</li>
+            </ul>
+            <p>На обоих участках были внедрены те же технологии, что и на предприятии в Германии. На данный момент это
+                одно из самых современных предприятий в своей области.
+            </p>
+        </div>
+        <a href="#gallery" class="gallery-link">Галерея</a>
+    </div>
 </section>
 <section id="gallery" class="section gallery-section">
     <a href="#about" class="about-link">О компании</a>
@@ -270,8 +283,12 @@
     </div>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <div class="button-set grid">
-        <div class="buttons"><a href="#get_price" class="button button-border-white show-modal">Запросить прайс на
-                всю продукцию Pferd</a> <a href="#" class="button button-border-white callback-form-init">Обратная
+        <div class="buttons">
+            <a href="#get_price" class="button button-border-white show-modal">Запросить прайс на
+                всю продукцию Pferd</a>
+            <a href="#callback" class="button button-border-white callback">Обратная
+                связь</a>
+            <a href="#callback_mobile" class="button button-border-white callback callback-mobile">Обратная
                 связь</a></div>
     </div>
 </section>
