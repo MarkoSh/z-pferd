@@ -91,42 +91,6 @@ input, textarea {
       background-size: 30px auto;
     }
   }
-  .phone-callback {
-    @media (max-width: 1024px) {
-      display: none;
-    }
-    a {
-      display: block;
-      color: white;
-      font-size: 22px;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .callback {
-      opacity: .5;
-      display: inline-block;
-      border-bottom: 1px dashed white;
-      &:hover {
-        opacity: 1;
-      }
-    }
-    form {
-      overflow: hidden;
-      height: 0;
-      transition: .2s;
-      &.active {
-        height: 240px;
-      }
-    }
-    .fieldset {
-      padding: #{ $gutter * 2 } 0;
-      grid-gap: $gutter;
-    }
-    .input-text {
-      display: block;
-      width: 100%;
-    }
-  }
   .menu-wrapper {
     height: 435px;
     @media (max-width: 1440px) {
@@ -252,6 +216,57 @@ input, textarea {
   }
 }
 
+
+.phone-callback {
+  &.mobile {
+    display: none;
+    background: $blue;
+    text-align: right;
+    padding: $gutter;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+    &.mobile {
+     display: block;
+    }
+  }
+
+
+  a {
+    display: block;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .2s;
+  }
+  .callback {
+    opacity: .5;
+    display: inline-block;
+    border-bottom: 1px dashed white;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  form {
+    overflow: hidden;
+    height: 0;
+    transition: .2s;
+    &.active {
+      height: 245px;
+    }
+  }
+  .fieldset {
+    padding: #{ $gutter * 2 } 0;
+    grid-gap: $gutter;
+  }
+  .input-text {
+    display: block;
+    width: 100%;
+  }
+}
+
+
 .input-text {
   display: inline-block;
   background: none;
@@ -359,34 +374,41 @@ input, textarea {
 /**page about*/
 
 .about-section {
-  background: #333 url("img/bg.jpg") left center no-repeat;
-  background-size: auto 150%;
-  // animation: slideBg 50s linear alternate infinite;
-  @media (max-width: 1024px) {
-    padding: #{ $gutter * 2 };
-  }
-  @media (max-width: 425px) {
-    padding: $gutter;
-  }
+  padding: 0;
 
-  h1 {
-    color: white;
-  }
+  .about-section-inner {
+    padding: #{ $gutter * 3 } #{ $gutter * 9 };
+    background: #333 url("img/bg.jpg") left center no-repeat;
+    background-size: auto 150%;
 
-  .content {
-    color: white;
-    > p {
-      padding: 1em 0;
-      text-align: justify
+    // animation: slideBg 50s linear alternate infinite;
+
+    @media (max-width: 1024px) {
+      padding: #{ $gutter * 2 };
+    }
+    @media (max-width: 425px) {
+      padding: $gutter;
     }
 
-    @media (max-width: 768px) {
-      margin: 40px 0;
+    h1 {
+      color: white;
     }
-  }
 
-  .gallery-link {
-    color: #fff;
+    .content {
+      color: white;
+      > p {
+        padding: 1em 0;
+        text-align: justify
+      }
+
+      @media (max-width: 768px) {
+        margin: 40px 0;
+      }
+    }
+
+    .gallery-link {
+      color: #fff;
+    }
   }
 }
 
@@ -981,39 +1003,52 @@ input, textarea {
 .contacts-section {
   padding: 0;
   grid-template-rows: 1fr 2fr 160px;
-}
 
-.contacts-section .contacts-section-inner {
-  padding: 68px 176px;
+  .contacts-section-inner {
+    padding: 68px 176px;
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+
+  h1 {
+    color: #0080ff;
+    font-size: 2em;
+    margin: 20px 0;
+  }
+
+  .address {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .callback-mobile {
+    display: none;
+  }
+
   @media (max-width: 768px) {
-    padding: 20px;
+    .address-right {
+      text-align: right;
+    }
+
+    .callback.callback-mobile {
+      display: inline-block;
+    }
+
+    .callback {
+      display: none;
+    }
   }
-}
 
-.contacts-section h1 {
-  color: #0080ff;
-  font-size: 2em;
-  margin: 20px 0;
-}
+  .button-set {
+    padding: 40px;
+    background-color: #1a8dff;
+    align-items: center;
 
-.contacts-section .address {
-  grid-template-columns: 1fr 1fr;
-}
+    .buttons {
+      text-align: center;
+    }
 
-@media (max-width: 768px) {
-  .contacts-section .address-right {
-    text-align: right;
   }
-}
-
-.contacts-section .button-set {
-  padding: 40px;
-  background-color: #1a8dff;
-  align-items: center;
-}
-
-.contacts-section .button-set .buttons {
-  text-align: center;
 }
 
 #map {
@@ -1032,6 +1067,7 @@ input, textarea {
   bottom: 0;
   left: 0;
   z-index: 1000;
+
   .modal-content {
     position: relative;
     margin: 5% auto;
@@ -1044,6 +1080,8 @@ input, textarea {
 
     @media (max-width: 768px) {
       padding: #{ $gutter * 2 };
+      width: 100%;
+      margin: 0;
     }
   }
   .dismiss {
@@ -1051,13 +1089,8 @@ input, textarea {
     position: absolute;
     top: $gutter;
     right: $gutter;
-    width: 30px;
-    height: 30px;
-
-    @media (max-width: 768px) {
-      width: 15px;
-      height: 15px;
-    }
+    width: 15px;
+    height: 15px;
 
 
     &:before, &:after {
@@ -1130,6 +1163,10 @@ input, textarea {
 
 #speed_table {
   padding: 60px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 
   .speed-table {
     width: 100%;
