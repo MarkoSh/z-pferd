@@ -68,7 +68,12 @@
 	} );
 
 	var about = document.getElementById( 'about' ),
-		gallery = document.getElementById( 'gallery' );
+		gallery = document.getElementById( 'gallery' ),
+		gallery_grid = document.querySelector('#gallery .grid');
+
+    gallery_grid.onwheel = function (e) {
+        e.stopPropagation();
+    };
 
 	about.onwheel = function ( e ) {
 		if ( e.deltaY > 0 ) {
